@@ -51,26 +51,28 @@ class MyStatelessWidget extends StatelessWidget {
                 controller: controller,
                 itemCount: 3,
                 itemBuilder: (BuildContext context, int itemIndex) {
-                  return Column(
-                    children: [
-                      Container(
-                          height: 300,
-                          child: Image(
-                              image: AssetImage(
-                                  content[itemIndex].image.toString()))),
-                      Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Text(
-                          content[itemIndex].title.toString(),
-                          textAlign: TextAlign.center,
-                          style: TextStyle(fontWeight: FontWeight.w800,fontSize: 20),
+                  return SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Container(
+                            height: 300,
+                            child: Image(
+                                image: AssetImage(
+                                    content[itemIndex].image.toString()))),
+                        Padding(
+                          padding: const EdgeInsets.all(25.0),
+                          child: Text(
+                            content[itemIndex].title.toString(),
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontWeight: FontWeight.w800,fontSize: 20),
+                          ),
                         ),
-                      ),
-                      Text(content[itemIndex].disc.toString(),
-                      textAlign: TextAlign.center,
-                        style: TextStyle(color:Colors.black54,fontSize: 15,fontWeight: FontWeight.bold),
-                      )
-                    ],
+                        Text(content[itemIndex].disc.toString(),
+                        textAlign: TextAlign.center,
+                          style: TextStyle(color:Colors.black54,fontSize: 15,fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
                   );
                 },
               ),
