@@ -140,7 +140,11 @@ class register extends StatelessWidget {
                             ),
                           ),
                         ),
-                        myButton(buttonText: "Register", fontButtonColor: Colors.white, backgroundColor: Colors.blue,formKey: formKey,),
+                        myButton(buttonText: "Register", fontButtonColor: Colors.white, backgroundColor: Colors.blue,clickCallback: (){
+                          if(formKey!.currentState!.validate()){
+
+                          }
+                        }),
                         Text(
                           "or",
                           style: TextStyle(fontSize: 20, color: Colors.black38),

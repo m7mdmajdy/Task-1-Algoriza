@@ -12,7 +12,7 @@ class myButton extends StatelessWidget {
       this.clickCallback,
       required this.fontButtonColor,
       required this.backgroundColor,
-        required this.formKey,
+        this.formKey,
       })
       : super(key: key);
 
@@ -27,9 +27,7 @@ class myButton extends StatelessWidget {
           minimumSize: const Size.fromHeight(50),
         ),
         onPressed: () {
-          if (formKey!.currentState!.validate()){
-            clickCallback!();
-          }
+          clickCallback!();
           },
         child: Text(
           buttonText!,

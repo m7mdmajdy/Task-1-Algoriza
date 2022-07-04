@@ -88,6 +88,10 @@ class loginForm extends StatelessWidget {
                           fontButtonColor: Colors.white,
                           backgroundColor: Colors.blue,
                         formKey: formKey,
+                         clickCallback: (){
+                           if (formKey!.currentState!.validate()){
+                           }
+                         },
 
                       ),
                       Text(
