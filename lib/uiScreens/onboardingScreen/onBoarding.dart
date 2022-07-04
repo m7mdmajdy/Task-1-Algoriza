@@ -10,6 +10,7 @@ import 'package:task1/uiScreens/register.dart';
 
 class MyStatelessWidget extends StatelessWidget {
   final controller = PageController();
+  final formKey = GlobalKey<FormState>();
 
   @override
   MyStatelessWidget({Key? key}) : super(key: key);
@@ -38,7 +39,7 @@ class MyStatelessWidget extends StatelessWidget {
                     ),
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
-                            HexColor("#e4e8be").withOpacity(0.7)),
+                            Color(0xfffaf4e7)),
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
@@ -90,6 +91,7 @@ class MyStatelessWidget extends StatelessWidget {
               ),
             ),
             myButton(
+              formKey: formKey,
               buttonText: "Get Started",
               fontButtonColor: Colors.white,
               clickCallback: () {
